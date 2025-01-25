@@ -22,7 +22,7 @@ const state = reactive({
 
 onMounted(async()=>{
     try{
-        const response = await axios.get('api/jobs');
+        const response = await axios.get('/api/jobs');
         
         //when using ref
         //jobs.value = response.data
