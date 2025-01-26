@@ -24,7 +24,7 @@ console.log(jobId)
 const deleteJob = async()=>{
     try{
         if(window.confirm('Are you sure you want to delete this job?')){
-            await axios.delete(`/api/jobs/${jobId}`)
+            await axios.delete(`https://jobs-server-dq87.onrender.com/jobs/${jobId}`)
             toast.success('Job deleted successfully')
             router.push('/jobs')
         }
@@ -38,7 +38,7 @@ const deleteJob = async()=>{
 
 onMounted(async ()=>{
     try{
-        const response = await axios.get(`/api/jobs/${jobId}`)
+        const response = await axios.get(`https://jobs-server-dq87.onrender.com/jobs/${jobId}`)
         state.job = response.data;
         console.log(response.data)
     }catch(error){
