@@ -22,7 +22,7 @@ const state = reactive({
 
 onMounted(async()=>{
     try{
-        const response = await axios.get('/https://jobs-server-dq87.onrender.com/jobs');
+        const response = await axios.get('https://jobs-server-dq87.onrender.com/jobs');
         
         //when using ref
         //jobs.value = response.data
