@@ -51,7 +51,7 @@ const state = reactive({
         }
     }
     try{
-        const response = await axios.put(`https://jobs-server-dq87.onrender.com/jobs/${jobId}`,updateJob)
+        const response = await axios.put(`https://job-json.miiglu.app/jobs/${jobId}`,updateJob)
         toast.success('job updated successfully!')// @todo - showtoast
         router.push(`/jobs/${response.data.id}`)
     }catch(error){
@@ -63,7 +63,7 @@ const state = reactive({
 
 onMounted(async()=>{
         try{
-            const response = await axios.get(`https://jobs-server-dq87.onrender.com/jobs/${jobId}`)
+            const response = await axios.get(`https://job-json.miiglu.app/jobs/${jobId}`)
             state.job = response.data;
             //populate inputs
             form.title = state.job.title;
