@@ -39,7 +39,7 @@ const form = reactive({
         }
     }
     try{
-        const response = await axios.post('https://jobs-server-dq87.onrender.com/jobs',newJob)
+        const response = await axios.post('https://job-json.miiglu.app',newJob)
         toast.success('job added successfully!')// @todo - showtoast
         router.push(`/jobs/${response.data.id}`)
     }catch(error){
