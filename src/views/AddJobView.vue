@@ -74,6 +74,7 @@ const form = reactive({
                 <option value="Full-Time">Full-Time</option>
                 <option value="Part-Time">Part-Time</option>
                 <option value="Remote">Remote</option>
+<option value="Hybrid">Hybrid</option>
                 <option value="Internship">Internship</option>
               </select>
             </div>
